@@ -1,0 +1,93 @@
+body {
+    background-color: #ffffff;
+}
+.btn {
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-submit {
+    background-color: #4386d8;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.btn-submit:hover {
+    background-color: #315f96;
+}
+.btn-default {
+    background-color: #d89663;
+}
+.btn-default:hover {
+    background-color: #966845;
+}
+.topround {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.form-group > label {
+    display: block;
+}
+form {
+    display: block;
+    width: 40%;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: #444444;
+    background-color: #444444;
+    margin: 20px auto;
+}
+input {
+    font-family: "Verdana";
+    font-size: 17px;
+    width: 100%;
+    border: none;
+    padding: 7px 16px;
+    background-color: #efefef;
+}
+label {
+    font-family: "Verdana";
+    font-size: 20px;
+    padding: 7px 10px;
+    max-width: 100%;
+    background-color: #8c8c8c;
+}
+.checkbox-custom {
+    opacity: 0;
+    position: absolute;
+}
+.checkbox-custom,
+.checkbox-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.checkbox-custom-label {
+    position: relative;
+    background-color: #efefef;
+}
+.checkbox-custom + .checkbox-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    background: rebeccapurple;
+}
+.checkbox-custom:focus + .checkbox-custom-label,
+.radio-custom:focus + .radio-custom-label {
+    outline: 1px solid #ddd;
+}

@@ -1,0 +1,69 @@
+<html ng-app="restapp" ng-controller="appcontroller">
+	<head>
+		<title>Laser clock</title>
+		<link rel="stylesheet" href="style.css">
+		</link>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<form name="drawbox" ng-submit="senddraw()">
+			<div class="form-group">
+				<label class="topround">Message</label>
+				<input type="text" ng-model="draw" required="true"></input>
+			</div>
+			<button ng-disabled="drawbox.$invalid" type="submit" class="btn btn-submit">Draw message</button>
+		</form>
+		<form name="clockbox">
+			<button ng-show="!state.clock" class="topround btn btn-default" ng-click="state.clock = true; sendclock()">Turn clock ON</button>
+			<button ng-show="state.clock" class="topround btn btn-default" ng-click="state.clock = false; sendclock()">Turn clock OFF</button>
+			<button class="btn btn-submit" ng-click="drawclock()">Draw clock</button>
+		</form>
+		<form>
+			<button type="submit" class="topround btn btn-submit" ng-click="sendtoggle()">Toggle laser</button>
+		</form>
+		<form name="gotobox" ng-submit="sendgoto()">
+			<div class="form-group">
+				<label class="topround">Go to X (mm)</label>
+				<input type="number" ng-model="state.gotox" required="true"></input>
+				<label>Go to Y (mm)</label>
+				<input type="number" ng-model="state.gotoy" required="true"></input>
+			</div>
+			<button ng-disabled="gotobox.$invalid" type="submit" class="btn btn-submit">Go to X,Y</button>
+		</form>
+		<form name="offsetbox" ng-submit="sendoffset()">
+			<div class="form-group">
+				<label class="topround">Offset X (mm)</label>
+				<input type="number" ng-model="state.offsetx" required="true"></input>
+				<label>Offset Y (mm)</label>
+				<input type="number" ng-model="state.offsety" required="true"></input>
+			</div>
+			<button ng-disabled="offsetbox.$invalid" type="submit" class="btn btn-submit">Offset by X,Y</button>
+		</form>
+		<form name="optionsbox" ng-submit="sendoptions()">
+			<div class="form-group">
+				<label class="topround">Brightness (0-1023)</label>
+				<input type="number" ng-model="state.bright" required="true"></input>
+				<label>Dotting</label>
+				<input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" ng-model="state.dotting"></input>
+				<label for="checkbox-1" class="checkbox-custom-label"></label>
+				<label>Distance (mm)</label>
+				<input type="number" ng-model="state.dist" required="true"></input>
+				<label>Square edge length (mm)</label>
+				<input type="number" ng-model="state.sqr" required="true"></input>
+				<label>Digit separation (mm)</label>
+				<input type="number" ng-model="state.sep" required="true"></input>
+				<label>Speed</label>
+				<input type="text" ng-model="state.sped" required="true"></input>
+				<label>Motor delay (ms)</label>
+				<input type="text" ng-model="state.motordelay" required="true"></input>
+				<label>Dot delay (ms)</label>
+				<input type="text" ng-model="state.dotdelay" required="true"></input>
+				<label>Request delay (ms)</label>
+				<input type="text" ng-model="state.requestdelay" required="true"></input>
+			</div>
+			<button class="btn btn-default" ng-click="defaultoptions()">Default options</button>
+			<button ng-disabled="optionsbox.$invalid" type="submit" class="btn btn-submit">Send options</button>
+		</form>
+	</body>
+</html>
