@@ -216,7 +216,7 @@ public class LaserState {
     
     public static String getTime() {
     	
-    	ZonedDateTime time = ZonedDateTime.now(ZoneId.of("GMT+"));	//get current time
+    	ZonedDateTime time = ZonedDateTime.now(ZoneId.of("GMT+2"));	//get current time
 		
 		String hh = "";		//string to keep hours
 		String mm = "";		//string to keep minutes
