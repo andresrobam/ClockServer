@@ -1,7 +1,6 @@
 package main.java.clockserver;
 
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 
 public class LaserState {
 	
@@ -216,7 +215,7 @@ public class LaserState {
     
     public static String getTime() {
     	
-    	ZonedDateTime time = ZonedDateTime.now(ZoneId.of("GMT+2"));	//get current time
+    	LocalDateTime time = LocalDateTime.now();	//get current time
 		
 		String hh = "";		//string to keep hours
 		String mm = "";		//string to keep minutes
