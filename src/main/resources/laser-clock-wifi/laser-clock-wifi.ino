@@ -6,10 +6,10 @@
 
 ESP8266WiFiMulti WiFiMulti;
 
-char* ssid = "kolm-kuus";         //wifi name
-char* password = "mingilambikas"; //wifi password
+char* ssid = "ssid";         //wifi name
+char* password = "password"; //wifi password
 
-String url = "http://192.168.0.10:8080/getstate"; //GET url
+String url = "http://192.168.0.1:8080/getstate"; //GET url
 
 const int laserpin = 3; //the driving the laser transistor
 const int pin1x = 0;    //yaw motor pins
