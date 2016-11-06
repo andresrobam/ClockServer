@@ -1,4 +1,4 @@
-package ee.andresrobam;
+package ee.andresrobam.clockserver;
 
 import java.time.LocalDateTime;
 

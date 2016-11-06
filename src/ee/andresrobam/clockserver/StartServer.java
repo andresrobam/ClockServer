@@ -1,4 +1,4 @@
-package ee.andresrobam;
+package ee.andresrobam.clockserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
